@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ismat Khalil, CS Student at UET Peshawar">
+</head>
+<body>
+
+    <header>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="profile.html">About</a></li>
+<li><a href="schedule.html">Courses</a></li>
+<li><a href="registration.html" class="active">Contact</a></li>
+<li><a href="https://www.uetpeshawar.edu.pk" target="_blank">UET Website</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+<h1>Student Registration Form</h1>
+
+<form name="registration" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="registration">
+
+  <!-- Full Name -->
+  <label>Full Name:</label><br>
+  <input type="text" name="fullName" required><br><br>
+
+  <!-- Registration Number -->
+  <label>Registration Number:</label><br>
+  <input type="text" name="regNo" required><br><br>
+
+  <!-- Email -->
+  <label>Email:</label><br>
+  <input type="email" name="email" required><br><br>
+
+  <!-- Password -->
+  <label>Password:</label><br>
+  <input type="password" name="password" required><br><br>
+
+  <!-- Select Course -->
+  <label>Select Course:</label><br>
+  <select name="course">
+      <option>Web Technologies</option>
+      <option>DBMS</option>
+      <option>OOP</option>
+      <option>Artificial Intelligence</option>
+  </select><br><br>
+
+  <!-- Semester -->
+  <label>Semester:</label><br>
+  <input type="radio" name="semester" value="1st"> 1st
+  <input type="radio" name="semester" value="2nd"> 2nd
+  <input type="radio" name="semester" value="3rd"> 3rd
+  <br><br>
+
+  <input type="checkbox" name="terms" required> I agree to Terms & Conditions<br><br>
+
+  <input type="submit" value="Register">
+</form>
+
+<br>
+<a href="index.html">Back to Home</a>
+
+</div>
+</body>
+</html>
