@@ -1,0 +1,29 @@
+body{
+font-family: Arial;
+}
+
+.font1{
+font-family: 'Roboto';
+font-size:20px;
+}
+
+.font2{
+font-family:'Lobster';
+font-size:2em;
+}
+
+.font3{
+font-family:'Montserrat';
+font-size:150%;
+}
+
+.align{
+text-align:center;
+text-decoration:underline;
+text-transform:uppercase;
+}
+
+.shadow{
+font-size:30px;
+text-shadow:2px 2px 5px gray;
+}

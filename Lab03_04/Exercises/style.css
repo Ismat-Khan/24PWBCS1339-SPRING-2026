@@ -1,0 +1,201 @@
+/* External CSS Example */
+.external{
+color:green;
+font-size:20px;
+}
+
+/* Universal Selector */
+*{
+font-family: Arial;
+}
+
+/* Element Selector */
+p{
+color:black;
+}
+
+/* Class Selector */
+.box{
+background-color: lightblue;
+padding:10px;
+margin:10px;
+}
+
+/* ID Selector */
+#unique{
+background-color: lightgreen;
+padding:10px;
+}
+
+/* Attribute Selector */
+input[type="text"]{
+border:2px solid blue;
+}
+
+input[type="password"]{
+border:2px solid red;
+}
+
+a[href]{
+color:purple;
+}
+
+/* Combinators */
+
+/* Descendant */
+.parent p{
+color:orange;
+}
+
+/* Child */
+.parent > span{
+color:blue;
+}
+
+/* Adjacent sibling */
+div + p{
+background-color:yellow;
+}
+
+/* General sibling */
+div ~ p{
+font-style:italic;
+}
+
+/* Pseudo Classes */
+
+a:hover{
+color:red;
+}
+
+input:focus{
+background-color:lightyellow;
+}
+
+input:checked{
+width:20px;
+height:20px;
+}
+
+/* Structural Pseudo */
+
+p:first-child{
+font-weight:bold;
+}
+
+p:last-child{
+color:green;
+}
+
+/* Pseudo Elements */
+
+.first::first-letter{
+font-size:30px;
+color:red;
+}
+
+.first::first-line{
+font-weight:bold;
+}
+
+.first::before{
+content:"Start: ";
+color:blue;
+}
+
+.first::after{
+content:" :End";
+color:green;
+}
+
+::selection{
+background:black;
+color:white;
+}
+
+/* Font Styling */
+
+.font-demo{
+font-family: Georgia;
+font-size:30px;
+font-weight:bold;
+}
+
+/* Text Styling */
+
+.text-style{
+text-align:center;
+text-decoration:underline;
+text-transform:uppercase;
+text-shadow:2px 2px 5px gray;
+}
+
+/* Text Spacing */
+
+.spacing{
+line-height:30px;
+letter-spacing:2px;
+word-spacing:5px;
+text-indent:40px;
+}
+
+/* Background */
+
+.bg-box{
+width:200px;
+height:100px;
+background-image:url("https://picsum.photos/300");
+background-size:cover;
+background-repeat:no-repeat;
+margin:10px;
+}
+
+.gradient{
+width:200px;
+height:100px;
+background:linear-gradient(red, yellow);
+margin:10px;
+}
+
+/* Images */
+
+.image1{
+width:200px;
+border-radius:20px;
+border:4px solid black;
+box-shadow:5px 5px 10px gray;
+}
+
+.image2{
+width:200px;
+border-radius:50%;
+filter:brightness(120%);
+}
+
+/* Box Model */
+
+.box-model{
+margin:20px;
+padding:20px;
+border:5px solid black;
+outline:3px dashed red;
+box-shadow:5px 5px 10px gray;
+width:200px;
+}
+
+/* Transform and Transition */
+
+.transform-box{
+width:150px;
+height:100px;
+background:skyblue;
+text-align:center;
+line-height:100px;
+margin:20px;
+transition:0.5s;
+}
+
+.transform-box:hover{
+transform:rotate(10deg) scale(1.2);
+background:orange;
+}
