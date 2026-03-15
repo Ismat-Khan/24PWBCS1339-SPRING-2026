@@ -1,0 +1,99 @@
+.gradientText{
+font-size:40px;
+background:linear-gradient(red,blue);
+background-clip:text;
+-webkit-background-clip:text;
+color:transparent;
+text-align:center;
+}
+
+.imageText{
+
+font-size:40px;
+
+background:url("https://picsum.photos/400");
+
+background-clip:text;
+-webkit-background-clip:text;
+
+color:transparent;
+
+text-align:center;
+
+}
+
+.shadowText{
+font-size:35px;
+text-align:center;
+color:black;
+text-shadow: 
+2px 2px 5px gray,
+4px 4px 10px lightgray,
+6px 6px 15px darkgray;
+}
+
+.loader{
+width:50px;
+height:50px;
+border:5px solid lightgray;
+border-top:5px solid blue;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin:40px auto;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+.customCheck{
+display:block;
+position:relative;
+padding-left:30px;
+margin:10px;
+cursor:pointer;
+}
+
+.customCheck input{
+display:none;
+}
+
+.checkmark{
+position:absolute;
+left:0;
+top:0;
+width:20px;
+height:20px;
+background:lightgray;
+}
+
+.customCheck input:checked + .checkmark{
+background:green;
+}
+
+.customRadio{
+display:block;
+position:relative;
+padding-left:30px;
+margin:10px;
+cursor:pointer;
+}
+
+.customRadio input{
+display:none;
+}
+
+.radiomark{
+position:absolute;
+left:0;
+top:0;
+width:20px;
+height:20px;
+background:lightgray;
+border-radius:50%;
+}
+
+.customRadio input:checked + .radiomark{
+background:blue;
+}
