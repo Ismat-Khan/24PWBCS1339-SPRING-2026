@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mobile-First Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    /* Base: Mobile styles */
+    .container {
+      background: lightblue;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Tablet styles */
+    @media (min-width: 600px) {
+      .container {
+        background: lightgreen;
+      }
+    }
+
+    /* Desktop styles */
+    @media (min-width: 900px) {
+      .container {
+        background: lightcoral;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2>Mobile-First Layout</h2>
+<div class="container">Resize window to see background change for tablet/desktop</div>
+
+</body>
+</html>

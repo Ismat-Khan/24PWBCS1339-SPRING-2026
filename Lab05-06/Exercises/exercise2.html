@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigation Display Examples</title>
+  <style>
+    /* Horizontal navigation using inline-block */
+    ul.horizontal-nav li {
+      display: inline-block;
+      margin-right: 15px;
+      list-style: none;
+      background: #87ceeb;
+      padding: 5px 10px;
+    }
+
+    /* Vertical navigation using block */
+    ul.vertical-nav li {
+      display: block;
+      margin-bottom: 5px;
+      list-style: none;
+      background: #ffa07a;
+      padding: 5px 10px;
+    }
+
+    /* Dropdown menu example */
+    ul.dropdown-nav {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.dropdown-nav li {
+      position: relative;
+      display: inline-block;
+      margin-right: 10px;
+      background: #90ee90;
+      padding: 5px 10px;
+    }
+
+    ul.dropdown-nav li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul.dropdown-nav li:hover ul {
+      display: block;
+    }
+
+    ul.dropdown-nav li ul li {
+      display: block;
+      background: #32cd32;
+      padding: 5px 10px;
+    }
+
+    /* Table-like layout using display: table */
+    .table-layout {
+      display: table;
+      width: 100%;
+      border: 1px solid black;
+    }
+    .table-row {
+      display: table-row;
+    }
+    .table-cell {
+      display: table-cell;
+      border: 1px solid gray;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Horizontal Navigation</h2>
+<ul class="horizontal-nav">
+  <li>Home</li>
+  <li>About</li>
+  <li>Services</li>
+  <li>Contact</li>
+</ul>
+
+<h2>Vertical Navigation</h2>
+<ul class="vertical-nav">
+  <li>Home</li>
+  <li>About</li>
+  <li>Services</li>
+  <li>Contact</li>
+</ul>
+
+<h2>Dropdown Navigation</h2>
+<ul class="dropdown-nav">
+  <li>Menu
+    <ul>
+      <li>Sub 1</li>
+      <li>Sub 2</li>
+      <li>Sub 3</li>
+    </ul>
+  </li>
+  <li>About</li>
+  <li>Contact</li>
+</ul>
+
+<h2>Table-like Layout</h2>
+<div class="table-layout">
+  <div class="table-row">
+    <div class="table-cell">Cell 1</div>
+    <div class="table-cell">Cell 2</div>
+    <div class="table-cell">Cell 3</div>
+  </div>
+  <div class="table-row">
+    <div class="table-cell">Cell 4</div>
+    <div class="table-cell">Cell 5</div>
+    <div class="table-cell">Cell 6</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Advanced CSS Grid</title>
+  <style>
+    .advanced-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .grid-item {
+      background: #87ceeb;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    /* minmax() example */
+    .minmax-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, 200px));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Grid line naming */
+    .named-grid {
+      display: grid;
+      grid-template-columns: [start] 1fr [middle] 2fr [end];
+      gap: 10px;
+    }
+    .named-grid div:nth-child(1) { grid-column: start / middle; background: #ffa07a; }
+    .named-grid div:nth-child(2) { grid-column: middle / end; background: #90ee90; }
+  </style>
+</head>
+<body>
+
+<h2>Fractional Units & Auto-fit / Auto-fill</h2>
+<div class="advanced-grid">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+</div>
+
+<h2>minmax() Example</h2>
+<div class="minmax-grid">
+  <div class="grid-item">A</div>
+  <div class="grid-item">B</div>
+  <div class="grid-item">C</div>
+</div>
+
+<h2>Grid Line Naming Example</h2>
+<div class="named-grid">
+  <div>Left</div>
+  <div>Right</div>
+</div>
+
+</body>
+</html>

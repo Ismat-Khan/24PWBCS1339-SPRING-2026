@@ -1,0 +1,65 @@
+body{
+font-family:Arial;
+margin:0;
+padding:0;
+}
+
+h1{
+text-align:center;
+margin-top:20px;
+}
+
+.layout{
+display:grid;
+grid-template-columns:250px 1fr;
+gap:20px;
+padding:20px;
+}
+
+/* Sidebar */
+.sidebar{
+background:#eee;
+padding:15px;
+}
+
+/* Product Grid */
+.products{
+display:grid;
+grid-template-columns:repeat(2, 1fr); /* 🔥 2 cards per row */
+gap:20px;
+}
+
+/* Card Styling */
+.card{
+border:1px solid #ddd;
+padding:15px;
+text-align:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.2);
+border-radius:5px;
+background:white;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:5px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+.layout{
+grid-template-columns:1fr;
+}
+
+.products{
+grid-template-columns:1fr;
+}
+}
+
+@media(min-width:1024px){
+.products{
+grid-template-columns:repeat(4,1fr);
+}
+}

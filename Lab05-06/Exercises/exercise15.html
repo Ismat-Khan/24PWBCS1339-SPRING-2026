@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Images</title>
+  <style>
+    img.responsive {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .background {
+      width: 100%;
+      height: 300px;
+      background-image: url('https://via.placeholder.com/800x300');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Responsive Images with srcset & sizes</h2>
+<img 
+  src="https://picsum.photos/200" 
+  srcset="https://picsum.photos/200 200w,https://picsum.photos/200 400w, https://picsum.photos/200 800w"
+  sizes="(max-width: 600px) 200px, (max-width: 1200px) 400px, 800px"
+  class="responsive"
+  alt="Responsive Example">
+
+<h2>Picture Element for Art Direction</h2>
+<picture>
+  <source media="(max-width: 600px)" srcset="https://picsum.photos/200">
+  <source media="(min-width: 601px)" srcset="https://picsum.photos/200">
+  <img src="https://picsum.photos/200" alt="Art Direction" class="responsive">
+</picture>
+
+<h2>Responsive Background Image</h2>
+<div class="background"></div>
+
+</body>
+</html>

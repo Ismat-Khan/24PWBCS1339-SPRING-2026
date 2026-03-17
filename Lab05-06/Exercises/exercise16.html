@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Combined Layout Techniques</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 1. Grid container with flex inside grid items */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .grid-item {
+      background: #90ee90;
+      padding: 10px;
+      display: flex; /* Flex inside grid */
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 2. Flex container with grid inside flex items */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .flex-item {
+      flex: 1;
+      background: #87ceeb;
+      padding: 10px;
+      display: grid; /* Grid inside flex */
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px;
+    }
+
+    .flex-item div {
+      background: #ffa07a;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    /* 3. Mixing floats with modern layouts */
+    .mixed-layout {
+      overflow: hidden; /* clearfix */
+      margin-top: 20px;
+    }
+
+    .mixed-layout .float-left {
+      float: left;
+      width: 30%;
+      background: #d8bfd8;
+      padding: 10px;
+      margin-right: 2%;
+      box-sizing: border-box;
+    }
+
+    .mixed-layout .flex-right {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      background: #32cd32;
+      padding: 10px;
+    }
+
+    .mixed-layout .flex-right div {
+      background: #ffa07a;
+      margin: 5px 0;
+      padding: 10px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h2>1. Grid with Flex inside Items</h2>
+<div class="grid-container">
+  <div class="grid-item">
+    <h3>Item 1</h3>
+    <button>Button A</button>
+  </div>
+  <div class="grid-item">
+    <h3>Item 2</h3>
+    <button>Button B</button>
+  </div>
+  <div class="grid-item">
+    <h3>Item 3</h3>
+    <button>Button C</button>
+  </div>
+</div>
+
+<h2>2. Flex Container with Grid inside Flex Items</h2>
+<div class="flex-container">
+  <div class="flex-item">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+  <div class="flex-item">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+  </div>
+</div>
+
+<h2>3. Mixing Floats with Modern Layouts</h2>
+<div class="mixed-layout clearfix">
+  <div class="float-left">Float Left Sidebar</div>
+  <div class="flex-right">
+    <div>Flex Content 1</div>
+    <div>Flex Content 2</div>
+    <div>Flex Content 3</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Utility Classes Demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../styles/utilities.css">
+<style>
+.box { background:#eee; padding:20px; border-radius:10px; margin:10px; }
+</style>
+</head>
+<body>
+
+<h1 class="text-center mb-5">Responsive Utility Classes Demo</h1>
+
+<div class="box show-mobile hide-desktop">Visible on Mobile only</div>
+<div class="box show-tablet hide-mobile hide-lg">Visible on Tablet only</div>
+<div class="box show-desktop hide-tablet">Visible on Desktop only</div>
+
+<div class="d-flex flex-column flex-md-row justify-center align-center mb-5">
+  <div class="box">Flex Item 1</div>
+  <div class="box">Flex Item 2</div>
+  <div class="box">Flex Item 3</div>
+</div>
+
+<p class="text-center text-md-left text-lg-right">
+  This paragraph changes alignment at different breakpoints.
+</p>
+
+</body>
+</html>

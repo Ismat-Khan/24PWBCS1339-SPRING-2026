@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Grid Container Examples</title>
+  <style>
+    .grid-container {
+      display: grid; /* create grid container */
+      gap: 10px;     /* gutter between tracks */
+      background: #f0f8ff;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* 3-column grid */
+    .grid-columns {
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 100px 100px;
+      grid-template-areas:
+        "header header header"
+        "left main right";
+    }
+
+    .grid-item {
+      background: #ffa07a;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+
+    .header { grid-area: header; }
+    .left { grid-area: left; }
+    .main { grid-area: main; }
+    .right { grid-area: right; }
+
+    /* Justify-items and align-items */
+    .justify-align-demo {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: 100px;
+      justify-items: center;
+      align-items: end;
+      gap: 10px;
+      background: #d8bfd8;
+      margin-bottom: 20px;
+    }
+
+    .justify-align-demo div {
+      background: #87ceeb;
+      padding: 10px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Grid Container Example</h2>
+<div class="grid-container grid-columns">
+  <div class="grid-item header">Header</div>
+  <div class="grid-item left">Left</div>
+  <div class="grid-item main">Main</div>
+  <div class="grid-item right">Right</div>
+</div>
+
+<h2>Justify-Items & Align-Items</h2>
+<div class="justify-align-demo">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+</body>
+</html>

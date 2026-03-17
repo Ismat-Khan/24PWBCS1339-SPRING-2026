@@ -1,0 +1,58 @@
+body{
+font-family:Arial;
+text-align:center;
+}
+
+.card-container{
+display:flex;
+flex-wrap:nowrap;
+gap:20px;
+padding:20px;
+justify-content:center;
+}
+
+.card{
+display:flex;
+flex-direction:column;
+width:300px;
+border:1px solid #ddd;
+box-shadow:0 2px 5px rgba(0,0,0,0.2);
+padding:15px;
+}
+
+.card img{
+width:40%;
+}
+
+.card button{
+margin-top:auto;
+padding:10px;
+background:#333;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.card button:hover{
+background:#555;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+.card{
+width:100%;
+}
+}
+
+@media(min-width:769px) and (max-width:1023px){
+.card{
+width:45%;
+}
+}
+
+@media(min-width:1024px){
+.card{
+width:30%;
+}
+}

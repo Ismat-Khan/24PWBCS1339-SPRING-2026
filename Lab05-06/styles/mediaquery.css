@@ -1,0 +1,24 @@
+body{
+font-family:Arial;
+text-align:center;
+}
+
+.box{
+padding:50px;
+background:lightblue;
+}
+
+/* Tablet */
+@media(min-width:768px){
+.box{
+background:orange;
+}
+}
+
+/* Desktop */
+@media(min-width:1024px){
+.box{
+background:green;
+color:white;
+}
+}

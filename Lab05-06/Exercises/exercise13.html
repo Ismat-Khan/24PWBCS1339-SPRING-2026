@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Query Fundamentals</title>
+  <style>
+    body {
+      background: lightgray;
+      padding: 20px;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 400px;
+      height: 100px;
+      background: lightblue;
+      margin: 10px auto;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    /* Min-width breakpoint */
+    @media (min-width: 600px) {
+      .box { background: lightgreen; }
+    }
+
+    /* Max-width breakpoint */
+    @media (max-width: 500px) {
+      .box { background: lightcoral; }
+    }
+
+    /* Device orientation */
+    @media (orientation: landscape) {
+      .box { border: 5px solid blue; }
+    }
+
+    @media (orientation: portrait) {
+      .box { border: 5px solid red; }
+    }
+
+    /* Media features: hover and pointer */
+    @media (hover: hover) {
+      .box:hover { transform: scale(1.1); transition: 0.3s; }
+    }
+
+    @media (pointer: coarse) {
+      .box { border-style: dashed; }
+    }
+  </style>
+</head>
+<body>
+
+<h2>Media Query Examples</h2>
+<div class="box">Resize window / rotate device and the colour changes</div>
+
+</body>
+</html>

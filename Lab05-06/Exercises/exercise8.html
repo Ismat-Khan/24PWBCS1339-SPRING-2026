@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flex Item Examples</title>
+  <style>
+    .flex-container {
+      display: flex;
+      border: 1px solid #000;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* flex item properties */
+    .item1 { flex-grow: 2; background: #ffa07a; }
+    .item2 { flex-grow: 1; background: #87ceeb; }
+    .item3 { flex-grow: 1; background: #90ee90; }
+
+    .flex-basis-example .flex-item {
+      flex-basis: 100px;
+      flex-shrink: 1;
+      padding: 20px;
+      margin: 5px;
+      text-align: center;
+    }
+
+    /* align-self example */
+    .align-self-container { display: flex; border: 1px solid black; height: 150px; margin-bottom: 20px; }
+    .align-self-container div {
+      padding: 20px;
+      background: #d8bfd8;
+      margin: 5px;
+    }
+    .align-start { align-self: flex-start; }
+    .align-center { align-self: center; }
+    .align-end { align-self: flex-end; }
+    .order-example div {
+      background: #ffb6c1;
+      padding: 20px;
+      margin: 5px;
+    }
+    .order1 { order: 3; }
+    .order2 { order: 1; }
+    .order3 { order: 2; }
+  </style>
+</head>
+<body>
+
+<h2>Flex Grow Example</h2>
+<div class="flex-container">
+  <div class="item1 flex-item">Grow 2</div>
+  <div class="item2 flex-item">Grow 1</div>
+  <div class="item3 flex-item">Grow 1</div>
+</div>
+
+<h2>Flex Basis and Shrink Example</h2>
+<div class="flex-container flex-basis-example">
+  <div class="flex-item">Item 1</div>
+  <div class="flex-item">Item 2</div>
+  <div class="flex-item">Item 3</div>
+</div>
+
+<h2>Align-Self Example</h2>
+<div class="align-self-container">
+  <div class="align-start">Start</div>
+  <div class="align-center">Center</div>
+  <div class="align-end">End</div>
+</div>
+
+<h2>Order Example</h2>
+<div class="flex-container order-example">
+  <div class="order1">Item 1</div>
+  <div class="order2">Item 2</div>
+  <div class="order3">Item 3</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Float Challenges</title>
+  <style>
+    /* 1. Handle float collapse (clearfix already included above) */
+
+    /* 2. Equal height columns using background + padding trick */
+    .equal-height {
+      background: #f0e68c;
+      overflow: hidden; /* contain floats */
+      margin-bottom: 20px;
+    }
+    .equal-height .column {
+      float: left;
+      width: 32%;
+      margin-right: 2%;
+      background: #ffb6c1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .equal-height .column:last-child {
+      margin-right: 0;
+    }
+
+    /* 3. Float-based grid system */
+    .grid-container {
+      overflow: hidden;
+    }
+    .grid-item {
+      float: left;
+      width: 24%;
+      margin-right: 1%;
+      background: #87ceeb;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    .grid-item:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    /* 4. Responsive floats using media queries */
+    @media (max-width: 800px) {
+      .two-column .column, .three-column .column, .grid-item {
+        width: 48%;
+        margin-right: 4%;
+      }
+      .two-column .column:last-child,
+      .three-column .column:last-child,
+      .grid-item:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 500px) {
+      .two-column .column, .three-column .column, .grid-item {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h2>2. Equal Height Columns</h2>
+<div class="equal-height clearfix">
+  <div class="column">Content 1</div>
+  <div class="column">Content 2 (longer content to test equal height)</div>
+  <div class="column">Content 3</div>
+</div>
+
+<h2>3. Float-based Grid System</h2>
+<div class="grid-container clearfix">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+</div>
+
+<h2>4. Responsive Floats (Resize browser to test)</h2>
+<p>Grid items will adjust based on screen width using media queries.</p>
+
+</body>
+</html>

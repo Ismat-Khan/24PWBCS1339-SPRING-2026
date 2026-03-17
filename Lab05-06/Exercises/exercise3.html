@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Float Layout Examples</title>
+  <style>
+    /* 1. Float images with text wrapping */
+    .float-img {
+      float: left;
+      width: 150px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* 2. Two-column layout */
+    .two-column .column {
+      float: left;
+      width: 48%;
+      margin-right: 2%;
+      background: #add8e6;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .two-column .column:last-child {
+      margin-right: 0;
+    }
+
+    /* 3. Three-column layout */
+    .three-column .column {
+      float: left;
+      width: 32%;
+      margin-right: 2%;
+      background: #90ee90;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .three-column .column:last-child {
+      margin-right: 0;
+    }
+
+    /* 4. Clearfix */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  </style>
+</head>
+<body>
+
+<h2>1. Float Image with Text Wrapping</h2>
+<img class="float-img" src="https://picsum.photos/200" alt="Image">
+<p>This is some text that will wrap around the floated image.</p>
+
+<h2>2. Two-Column Layout</h2>
+<div class="two-column clearfix">
+  <div class="column">Column 1 Content</div>
+  <div class="column">Column 2 Content</div>
+</div>
+
+<h2>3. Three-Column Layout</h2>
+<div class="three-column clearfix">
+  <div class="column">Column 1</div>
+  <div class="column">Column 2</div>
+  <div class="column">Column 3</div>
+</div>
+
+</body>
+</html>

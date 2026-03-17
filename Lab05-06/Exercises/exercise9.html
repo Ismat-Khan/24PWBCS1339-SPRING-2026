@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flex Practical Layouts</title>
+  <style>
+    /* 1. Responsive Navigation Bar */
+    .nav-bar {
+      display: flex;
+      justify-content: space-around;
+      background: #32cd32;
+      padding: 10px;
+    }
+    .nav-bar a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    /* 2. Card Layout */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .card {
+      flex: 1 1 200px;
+      background: #f0e68c;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* 3. Holy Grail Layout */
+    .holy-grail {
+      display: flex;
+    }
+    .header, .footer {
+      background: #ffa07a;
+      padding: 10px;
+      text-align: center;
+    }
+    .main { flex: 1; background: #90ee90; padding: 10px; }
+    .sidebar { width: 150px; background: #87ceeb; padding: 10px; }
+
+    /* 4. Form Layout */
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+    .form-container input, .form-container select, .form-container button {
+      flex: 1 1 45%;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>1. Responsive Navigation Bar</h2>
+<div class="nav-bar">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<h2>2. Card Layout</h2>
+<div class="card-container">
+  <div class="card">Card 1</div>
+  <div class="card">Card 2</div>
+  <div class="card">Card 3</div>
+  <div class="card">Card 4</div>
+</div>
+
+<h2>3. Holy Grail Layout</h2>
+<div class="holy-grail">
+  <div class="sidebar">Sidebar</div>
+  <div class="main">Main Content</div>
+  <div class="sidebar">Sidebar</div>
+</div>
+<div class="footer">Footer</div>
+
+<h2>4. Form Layout</h2>
+<div class="form-container">
+  <input type="text" placeholder="Name">
+  <input type="email" placeholder="Email">
+  <select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select>
+  <button>Submit</button>
+</div>
+
+</body>
+</html>

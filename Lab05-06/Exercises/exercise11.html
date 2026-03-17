@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Grid Item Examples</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: 100px 100px;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .grid-item {
+      background: #90ee90;
+      text-align: center;
+      padding: 10px;
+      color: white;
+    }
+
+    /* Grid item placement */
+    .item1 { grid-column: 1 / 3; grid-row: 1 / 2; }
+    .item2 { grid-column: 3 / 5; grid-row: 1 / 3; }
+    .item3 { grid-column: 1 / 2; grid-row: 2 / 3; }
+    .item4 { grid-column: 2 / 3; grid-row: 2 / 3; }
+
+    /* Justify-self & Align-self */
+    .justify-align-self {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: 100px;
+      gap: 10px;
+      background: #f0e68c;
+    }
+    .justify-align-self div {
+      background: #ffb6c1;
+      padding: 10px;
+      color: white;
+    }
+    .start { justify-self: start; }
+    .center { justify-self: center; }
+    .end { justify-self: end; }
+    .align-start { align-self: start; }
+    .align-center { align-self: center; }
+    .align-end { align-self: end; }
+  </style>
+</head>
+<body>
+
+<h2>Grid Item Placement Example</h2>
+<div class="grid-container">
+  <div class="grid-item item1">Item 1</div>
+  <div class="grid-item item2">Item 2</div>
+  <div class="grid-item item3">Item 3</div>
+  <div class="grid-item item4">Item 4</div>
+</div>
+
+<h2>Justify-Self & Align-Self Example</h2>
+<div class="justify-align-self">
+  <div class="start align-start">Start / Start</div>
+  <div class="center align-center">Center / Center</div>
+  <div class="end align-end">End / End</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+/* Mobile First */
+body{
+  font-size:14px;
+  text-align:center;
+  margin:20px;
+  color:black;
+}
+
+/* Tablet (768px and up) */
+@media(min-width:768px){
+  body{
+    font-size:16px;
+    background:lightblue;
+    color:black;
+  }
+}
+
+/* Small Desktop (1024px and up) */
+@media(min-width:1024px){
+  body{
+    font-size:18px;
+    background:orange;
+    color:black;
+  }
+}
+
+/* Large Desktop (1200px and up) */
+@media(min-width:1200px){
+  body{
+    font-size:20px;
+    background:green;
+    color:white;
+  }
+}
+
+/* Extra Large (1400px and up) */
+@media(min-width:1400px){
+  body{
+    font-size:22px;
+    background:black;
+    color:white;
+  }
+}
